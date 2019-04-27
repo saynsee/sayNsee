@@ -1,2 +1,2 @@
 # video-maker
-Set of bot to automate video production
+A set of bots to automate video production
