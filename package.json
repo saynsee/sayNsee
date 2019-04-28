@@ -1,0 +1,19 @@
+{
+  "name": "video-maker",
+  "version": "1.0.0",
+  "description": "a beautiful set of bots for YouTube video automated creation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eugeniostreliaev/video-maker.git"
+  },
+  "author": "Eugenio Streliaev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eugeniostreliaev/video-maker/issues"
+  },
+  "homepage": "https://github.com/eugeniostreliaev/video-maker#readme"
+}
