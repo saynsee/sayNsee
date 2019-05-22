@@ -4,10 +4,13 @@
 
 File: `algorithmia.json`
 
-```{
+```
+{
     "apiKey": "simbNlAJHojoC3u/Xi3OKAvTDbU1"
 }
 ```
+
+
 ## Watson Natural Language Understanding
 
 File: `watson-nlu.json`

@@ -1,10 +1,12 @@
 const algorithmia = require('algorithmia')
 const algorithmiaApiKey = require('../credentials/algorithmia.json').apiKey
-
 const sentenceBoundaryDetection = require('sbd')
-
 const watsonApiKey = require('../credentials/watson-nlu.json').apikey
+
+// importando o MODULO
 const NaturalLanguageUnderstandingV1 = require('ibm-watson/natural-language-understanding/v1.js')
+
+// nlu: criando a minha instancia do modulo
 const nlu = new NaturalLanguageUnderstandingV1({
   iam_apikey: watsonApiKey,
   version: '2018-04-05',
@@ -14,8 +16,10 @@ const nlu = new NaturalLanguageUnderstandingV1({
 const state = require('./state.js')
 
 
+
 async function robot() {
     const content = state.load()
+
     await fetchContentFromWikipedia(content)
     sanitizeContent(content)
     breakContentIntoSentences(content)
@@ -55,9 +59,13 @@ async function robot() {
 
 
 
+
     function removeDatesInParenthesis(text) {
         return text.replace(/\((?:\([^()]*\)|[^()])*\)/gm, '').replace(/  /g,' ')
     }
+
+
+
 
 
     function breakContentIntoSentences(content) {
@@ -74,9 +82,12 @@ async function robot() {
     }
 
 
+
     function limitMaximumSentences(content) {
         content.sentences = content.sentences.slice(0, content.maximumSentences)
     }
+
+
 
     async function fetchKeywordsOfAllSentences(content) {
         console.log('Magically fetching keywords from Watson. Wait and see...')
@@ -85,7 +96,9 @@ async function robot() {
         }
     }
 
+
     // receives a sentence as parameter and returns keywords to be used as please
+    // the sentence enters into an object that is then sentt to watson
     async function fetchWatsonAndReturnKeywords(sentence) {
         return new Promise((resolve, reject) => {
             nlu.analyze({
