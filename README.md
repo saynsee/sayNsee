@@ -1,7 +1,6 @@
 # video-maker
-A set of bots to automate video production
+an installation that displays on screens content typed or spoken by user
 
-> Eugenio rocks!
 
 To run locally, remember to install its dependencies:
 

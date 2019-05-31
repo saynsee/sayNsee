@@ -21,6 +21,7 @@
     "googleapis": "^40.0.0",
     "ibm-watson": "^4.1.0",
     "image-downloader": "^3.4.2",
+    "keyword-extractor": "0.0.16",
     "readline-sync": "^1.4.9",
     "sbd": "^1.0.15"
   }
